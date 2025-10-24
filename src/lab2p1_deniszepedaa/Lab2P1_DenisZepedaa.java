@@ -44,7 +44,7 @@ public class Lab2P1_DenisZepedaa {
     double desc=0;
     double totalp=0;
     double x=0;
-    double y=0;
+    int n=1;
     double sumatoria=0;
     
         do {
@@ -121,12 +121,14 @@ public class Lab2P1_DenisZepedaa {
                     System.out.println("Sumatoria");
                     System.out.println("Ingrese la base K: ");
                     x = entry.nextDouble();
-                    System.out.println("Ingrese la potencia: ");
-                    y=entry.nextDouble();
-                    if (x>=1) {
-                        sumatoria=Math.pow(x, y);
-                    }else{
-                        System.out.println("Error... Ingrese un valor valido que sea positivo");
+                    while (n<=x) {                        
+                        if (x >= 1) {
+                            sumatoria = Math.pow(x, n);
+                        } else {
+                            System.out.println("Error... Ingrese un valor valido que sea positivo");
+                        }
+                        System.out.println("La sumatoria es de: "+sumatoria);
+                    n++;
                     }
                     
                     System.out.println("Output: "+sumatoria);
